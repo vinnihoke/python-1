@@ -37,7 +37,7 @@ print("Distance is: {:.2f}".format(dist(a, b)))
 
 # YOUR CODE HERE
 def print_tuple(var):
-    for elem in range(len(var)):
+    for elem in var:
         print(elem)
 
 
