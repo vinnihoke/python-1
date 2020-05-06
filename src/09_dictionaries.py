@@ -51,7 +51,11 @@ for elem in waypoints:
     for key in elem:
         if elem.get(key) == 'a place':
             elem.update({"name": "not a real place", "lon": "-130"})
-print(waypoints)
+# print(waypoints)
 
-# ? Write a loop that prints out all the field values for all the waypoints
+# * Write a loop that prints out all the field values for all the waypoints
 # YOUR CODE HERE
+
+for i in range(len(waypoints)):
+    for key, value in waypoints[i].items():
+        print(value)

@@ -32,16 +32,24 @@ import calendar
 from datetime import datetime
 
 today = datetime.today()
-
-userinputMonth = input("Enter a month: ")
-userinputYear = input("Enter a year: ")
-
-
-def new_calendar(month, year):
-    if(month == '' or year == ''):
-        print(calendar.month(today.year, today.month))
-    else:
-        print(calendar.month(int(year), int(month)))
+month = today.month
+year = today.year
 
 
-new_calendar(userinputMonth, userinputYear)
+def change_month(new_month):
+    global month
+    month = new_month
+
+
+def change_year(new_year):
+    global year
+    year = new_year
+
+
+if(len(sys.argv) == 2):
+    change_month(int(sys.argv[1]))
+elif(len(sys.argv) == 3):
+    change_month(int(sys.argv[1]))
+    change_year(int(sys.argv[2]))
+
+print(calendar.month(year, month))

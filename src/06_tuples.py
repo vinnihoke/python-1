@@ -36,8 +36,8 @@ print("Distance is: {:.2f}".format(dist(a, b)))
 # * Write a function `print_tuple` that prints all the values in a tuple
 
 # YOUR CODE HERE
-def print_tuple(var):
-    for elem in var:
+def print_tuple(banana):
+    for elem in banana:
         print(elem)
 
 
